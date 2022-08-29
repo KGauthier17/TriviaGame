@@ -262,12 +262,12 @@ h1 {
   }
   .top-left-text {
     font-size: 75%;
-    top: 50px;
+    top: 100px;
     left: 110px;
   }
   .bottom-text {
     font-size: 75%;
-    bottom: 35px;
+    bottom: 85px;
     left: 110px;
   }
   .bottom-text p {

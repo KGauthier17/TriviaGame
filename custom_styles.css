@@ -1,0 +1,289 @@
+ html, body {
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+   display: flex;
+ }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background: url('blurry-gradient-haikei.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.streak h3, .streak p {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  display: inline;
+  vertical-align: top;
+  z-index: 4;
+  font-size: 22px;
+  line-height: 28px;
+}
+.streak h3 {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+h1 {
+  z-index: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cur_answer {
+  font-size: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #611d87;
+  z-index: -10;
+  visibility: hidden;
+}
+
+
+.top-left-text p {
+  text-align: left;
+}
+
+.popup {
+  position: absolute;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  z-index: 4;
+  background-color: red;
+  opacity: 0.9;
+  margin: 0 auto;
+  text-align: center;
+  transform: rotate(-12deg);
+}
+
+.is-correct {
+	color: green;
+	border: 0.5rem solid;
+  border-color: green;
+	-webkit-mask-position: 13rem 6rem;
+	transform: rotate(-20deg);
+  border-radius: 0;
+}
+
+.stamp {
+  visibility: hidden;
+  z-index: 4;
+  left: 0;
+  top: -100px;
+  position: absolute;
+  transform: rotate(12deg);
+	color: #555;
+	font-size: 3rem;
+	font-weight: 700;
+	border: 0.25rem none #555;
+	display: inline-block;
+	padding: 0.25rem 1rem;
+	text-transform: uppercase;
+	border-radius: 1rem;
+	font-family: 'Courier';
+	-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+
+
+.container {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+.answer {
+  transition: ease-in 2s;
+}
+
+.answers td{
+  width: 50%;
+  padding: 7px 7px;
+}
+
+.bottom-text p {
+  text-align: left;
+  width: 100%;
+}
+
+
+/* CSS */
+.button-53 {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+.top-left-text {
+  top: 170px;
+  left: 310px;
+}
+
+.bottom-text {
+  transition-delay: 0.5;
+  bottom: 205px;
+  right: 295px;
+}
+
+
+.top-blob {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  z-index: -1;
+}
+
+.bottom-blob {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  z-index: -2;
+}
+
+
+.top-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.top-border svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 156px;
+}
+
+.top-border .shape-fill {
+    fill: #8A72F6;
+}
+
+.bottom-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-border svg {
+    position: relative;
+    display: block;
+    width: calc(112% + 1.3px);
+    height: 156px;
+}
+
+.bottom-border .shape-fill {
+    fill: #8A72F6;
+}
+
+.col1, .col3 {
+  width: 45%;
+}
+
+.row {
+  width: 100%;
+  margin: 10px auto;
+}
+
+@media screen and (max-width:700px) {
+.streak h3, .streak p {
+  font-size: 85%;
+  right: 25px;
+}
+
+  .top-border svg {
+    height: 75px;
+  }
+  .top-blob {
+    height: 50%;
+    width: 175%;
+    top: 50px;
+    left: -160px;
+  }
+  .container {
+    width: 200px;
+    height: 200px;
+  }
+  .top-left-text {
+    font-size: 75%;
+    top: 135px;
+    left: 110px;
+  }
+  .bottom-text {
+    font-size: 75%;
+    bottom: 150px;
+    left: 110px;
+  }
+  .bottom-text p {
+    padding-left: 10px;
+  }
+  .bottom-blob {
+    height: 50%;
+    width: 175%;
+    bottom: 35px;
+    right: -125px;
+  }
+  .bottom-border svg {
+    height: 75px;
+  }
+  .button-53 {
+    padding: .05rem 0.5rem;
+    font-size: 1rem;
+  }
+}
